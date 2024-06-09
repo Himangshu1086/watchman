@@ -3,7 +3,7 @@
 ## How to Install :
 Install the package 
 ```
-go install github.com/Himangshu1086/watchman
+go install github.com/Himangshu1086/watchman@latest
 ```
 
 ## How To Use :
