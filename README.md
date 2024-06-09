@@ -8,9 +8,9 @@ go install github.com/Himangshu1086/watchman@latest
 
 ## How To Use :
 ```
-go run watchman.go <port> <server-filepath>
+watchman <port> <server-filepath>
 ```
-eg : `go run watchman.go 8000 cmd/user-service.go`
+eg : `watchman 8000 cmd/user-service.go`
 
 ## Important :
 **Add Go bin directory to your PATH**:
