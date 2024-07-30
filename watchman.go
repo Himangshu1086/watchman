@@ -45,7 +45,6 @@ func stopServer() {
 func main() {
 
 	if len(os.Args) < 3 {
-		fmt.Println("Usage: go run watchman.go  <port> <server-filepath>")
 		os.Exit(1)
 	}
 
@@ -77,7 +76,7 @@ func main() {
 				if !ok {
 					return
 				}
-				log.Println("Error:", err)
+				log.Println("Error:", err.Error())
 			}
 		}
 	}()
