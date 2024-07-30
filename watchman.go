@@ -66,7 +66,6 @@ func main() {
 				if !ok {
 					return
 				}
-				log.Println("Event:", event)
 				if event.Op&fsnotify.Write == fsnotify.Write {
 					log.Println("Modified file:", event.Name)
 					stopServer()
