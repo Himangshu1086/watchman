@@ -14,6 +14,7 @@ import (
 var serverCmd *exec.Cmd
 
 func startServer(serverFilePath string, port string) {
+	port = "8081"
 	pid, error := checkPort(port)
 	if error != nil {
 		log.Println(error)
@@ -81,10 +82,15 @@ func main() {
 			}
 		}
 	}()
-
+	excludeDirs := []string{".git"}
 	err = filepath.Walk(".", func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
+		}
+		for _, excludeDir := range excludeDirs {
+			if strings.Contains(path, excludeDir) {
+				return nil
+			}
 		}
 		if info.IsDir() {
 			return watcher.Add(path)
