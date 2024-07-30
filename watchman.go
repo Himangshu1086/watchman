@@ -14,7 +14,6 @@ import (
 var serverCmd *exec.Cmd
 
 func startServer(serverFilePath string, port string) {
-	port = "8081"
 	pid, error := checkPort(port)
 	if error != nil {
 		log.Println(error)
